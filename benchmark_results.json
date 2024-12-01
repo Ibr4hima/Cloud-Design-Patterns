@@ -1,0 +1,62 @@
+{
+    "timestamp": "2024-12-01 14:52:26",
+    "strategies": {
+        "direct": {
+            "port": 3306,
+            "read": {
+                "total_requests": 1000,
+                "success_rate": 100.0,
+                "error_rate": 0.0,
+                "execution_time": 97.38,
+                "avg_latency_ms": 96.91,
+                "port": 3306
+            },
+            "write": {
+                "total_requests": 1000,
+                "success_rate": 100.0,
+                "error_rate": 0.0,
+                "execution_time": 106.23,
+                "avg_latency_ms": 105.76,
+                "port": 3306
+            }
+        },
+        "random": {
+            "port": 3307,
+            "read": {
+                "total_requests": 1000,
+                "success_rate": 100.0,
+                "error_rate": 0.0,
+                "execution_time": 95.35,
+                "avg_latency_ms": 94.91,
+                "port": 3307
+            },
+            "write": {
+                "total_requests": 1000,
+                "success_rate": 100.0,
+                "error_rate": 0.0,
+                "execution_time": 114.26,
+                "avg_latency_ms": 113.79,
+                "port": 3307
+            }
+        },
+        "customized": {
+            "port": 3308,
+            "read": {
+                "total_requests": 1000,
+                "success_rate": 100.0,
+                "error_rate": 0.0,
+                "execution_time": 107.0,
+                "avg_latency_ms": 106.54,
+                "port": 3308
+            },
+            "write": {
+                "total_requests": 1000,
+                "success_rate": 100.0,
+                "error_rate": 0.0,
+                "execution_time": 108.23,
+                "avg_latency_ms": 107.76,
+                "port": 3308
+            }
+        }
+    }
+}
