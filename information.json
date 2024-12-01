@@ -1,0 +1,70 @@
+{
+    "instances": {
+        "manager": {
+            "hostname": "ec2-3-82-35-123.compute-1.amazonaws.com",
+            "type": "t2.micro",
+            "role": "MySQL Manager",
+            "port": 3306
+        },
+        "workers": [
+            {
+                "hostname": "ec2-54-159-34-221.compute-1.amazonaws.com",
+                "type": "t2.micro",
+                "role": "MySQL Worker 1",
+                "port": 3306
+            },
+            {
+                "hostname": "ec2-34-229-140-66.compute-1.amazonaws.com",
+                "type": "t2.micro",
+                "role": "MySQL Worker 2",
+                "port": 3306
+            }
+        ],
+        "services": {
+            "gatekeeper": {
+                "hostname": "ec2-54-172-114-172.compute-1.amazonaws.com",
+                "type": "t2.large",
+                "role": "Gatekeeper Service",
+                "port": 5000
+            },
+            "trusted_host": {
+                "hostname": "ec2-54-226-151-52.compute-1.amazonaws.com",
+                "type": "t2.large",
+                "role": "Trusted Host Service",
+                "port": 5001
+            },
+            "proxy": {
+                "hostname": "ec2-3-84-181-71.compute-1.amazonaws.com",
+                "type": "t2.large",
+                "role": "Proxy Service",
+                "ports": {
+                    "direct": 3306,
+                    "random": 3307,
+                    "custom": 3308,
+                    "api": 5000
+                }
+            }
+        }
+    },
+    "security_groups": {
+        "mysql": [
+            "22/tcp",
+            "3306/tcp"
+        ],
+        "proxy": [
+            "22/tcp",
+            "3306/tcp",
+            "3307/tcp",
+            "3308/tcp",
+            "5000/tcp"
+        ],
+        "trusted_host": [
+            "22/tcp",
+            "5001/tcp"
+        ],
+        "gatekeeper": [
+            "22/tcp",
+            "5000/tcp"
+        ]
+    }
+}
